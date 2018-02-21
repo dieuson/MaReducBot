@@ -1,0 +1,56 @@
+MotionNotify 1039 80
+KeyStrRelease Escape
+MotionNotify 1042 60
+Delay 1
+ButtonPress 1
+ButtonRelease 1
+Delay 1
+
+KeyStrPress equal
+KeyStrRelease equal
+KeyStrPress KP_Left
+KeyStrRelease KP_Left
+KeyStrPress KP_Begin
+KeyStrRelease KP_Begin
+KeyStrPress KP_Down
+KeyStrRelease KP_Down
+KeyStrPress KP_Insert
+KeyStrRelease KP_Insert
+KeyStrPress KP_Next
+KeyStrRelease KP_Next
+KeyStrPress KP_Next
+KeyStrRelease KP_Next
+KeyStrPress KP_Insert
+KeyStrRelease KP_Insert
+
+Delay 1
+KeyStrPress Down
+KeyStrRelease Down
+Delay 1
+KeyStrPress Return
+KeyStrRelease Return
+Delay 3
+MotionNotify 777 346
+ButtonPress 1
+ButtonRelease 1
+Delay 3
+MotionNotify 1098 398
+ButtonPress 1
+ButtonRelease 1
+Delay 3
+MotionNotify 911 452
+ButtonPress 1
+ButtonRelease 1
+Delay 30
+KeyStrPress Control_L
+KeyStrPress w
+KeyStrRelease w
+KeyStrRelease Control_L
+Delay 3
+MotionNotify 647 474
+ButtonPress 1
+ButtonRelease 1
+Delay 3
+MotionNotify 697 585
+ButtonPress 1
+ButtonRelease 1
