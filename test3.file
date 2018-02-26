@@ -1,18 +1,6 @@
 MotionNotify 1039 80
 KeyStrRelease Escape
 MotionNotify 1042 60
-
-Delay 1
-ButtonPress 1
-ButtonRelease 1
-Delay 1
-
-KeyStrPress Control_L
-KeyStrPress Shift_R
-KeyStrPress n
-KeyStrRelease n
-KeyStrRelease Control_L
-KeyStrRelease Shift_R
 Delay 1
 ButtonPress 1
 ButtonRelease 1

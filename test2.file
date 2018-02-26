@@ -1,0 +1,11 @@
+MotionNotify 569 127
+KeyStrPress Alt_L
+KeyStrPress Tab
+KeyStrRelease Tab
+KeyStrRelease Alt_L
+KeyStrPress Alt_L
+KeyStrPress Tab
+KeyStrRelease Alt_L
+KeyStrRelease Tab
+KeyStrPress Control_L
+KeyStrPress c

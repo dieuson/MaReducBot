@@ -1,0 +1,40 @@
+https://www.ma-reduc.com/majax.php
+comment: 
+id_coupon: 4520330
+login: -
+method: CouponReview/add
+type_coupon: web
+ugc_type: CouponReview
+work: 1
+
+POST https://www.ma-reduc.com/majax.php
+Accept: */*
+X-NewRelic-ID: VQIGVFNSGwcJU1hQDgY=
+Origin: https://www.ma-reduc.com
+X-Requested-With: XMLHttpRequest
+User-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/64.0.3282.167 Safari/537.36
+Content-Type: application/x-www-form-urlencoded; charset=UTF-8
+Referer: https://www.ma-reduc.com/reductions-pour-frichti.php?c=4520330
+Accept-Encoding: gzip, deflate, br
+Accept-Language: fr-FR,fr;q=0.9,en-US;q=0.8,en;q=0.7
+Cookie: fp=5a2094041f8a76ce16d7e052; original_referer=https%3A%2F%2Fwww.google.fr%2F; original_landing_page=https%3A%2F%2Fwww.ma-reduc.com%2Freductions-pour-frichti.php; about_cookies=seen; __rmnz=utmccn=(organic)|utmcsr=google|utmctr=(not%20provided)|utmcmd=organic; styles_cached=eyJyZWR1Y3Rpb25zLXBvdXItbWFyY2hhbmQiOiI3MDEzIn0%3D; gtm=1; landing_page=https%3A%2F%2Fwww.ma-reduc.com%2Freductions-pour-frichti.php; session_referer=https%3A%2F%2Fwww.google.fr%2F; __utmc=84167813; __gads=ID=fa29d02d4ae0edd8:T=1519653132:S=ALNI_MYxyl0PgjbXtPYkexHzkE8i-94Peg; ABTasty=uid%3D18022615085576571%26fst%3D1519654135348%26pst%3Dnull%26cst%3D1519654135348%26ns%3D1%26pvt%3D1%26pvis%3D1%26th%3D; mids=%5B46474%2C4312%2C46474%5D; coupons_review=%7B%224520330%22%3A1519658819%2C%224524094%22%3A1519660469%2C%224524236%22%3A1519662562%7D; sn2=eyJ1c2VyIjpudWxsLCJpZF91c2VyIjotMSwibG9nZ2VkIjpmYWxzZSwiaTE4biI6ImZyX0ZSIiwia2V5IjoiNDE1MzMzMDcxMjk4YjM5ZGVhYzdlODg3ZGQwZWI4NzU5YzZjOGIzOCJ9; __utma=84167813.836059815.1512084486.1519651470.1519664037.77; __utmz=84167813.1519664037.77.11.utmcsr=google|utmccn=(organic)|utmcmd=organic|utmctr=(not%20provided); viewport=6; __utmt=1; clickpage=https%3A%2F%2Fwww.ma-reduc.com%2Freductions-pour-frichti.php%3Fc%3D4520330; viewport=3; click_46474=1; __utmb=84167813.10.9.1519665914780; clickout_46474=5a9442fb8d3739644203f8d2
+
+HTTP/1.1 200 OK
+Server: nginx
+Date: Mon, 26 Feb 2018 17:25:47 GMT
+Content-Type: application/json; charset=UTF-8
+Content-Length: 54
+Connection: keep-alive
+Set-Cookie: sn2=eyJ1c2VyIjpudWxsLCJpZF91c2VyIjotMSwibG9nZ2VkIjpmYWxzZSwiaTE4biI6ImZyX0ZSIiwia2V5IjoiNDE1MzMzMDcxMjk4YjM5ZGVhYzdlODg3ZGQwZWI4NzU5YzZjOGIzOCJ9; expires=Tue, 26-Mar-2019 17:25:47 GMT; Max-Age=33955200; path=/; domain=www.ma-reduc.com
+Expires: Tue, 26 Feb 2013 17:25:47
+Last-Modified: Mon, 26 Feb 2018 17:25:43 GMT
+Cache-Control: no-transform
+Pragma: no-cache
+X-NewRelic-App-Data: PxQGVVdWDQITUFhVDgMOUUYdFGQHBDcQUQxLA1tMXV1dORYiRBJHDQlqGAAMAkBvHycOF0deWTQBR19WFTpMA1QGGk4IFgQCA1UJTQJPC1JSBQ9NU1cUEQMABVJTVFVVVQVVUlpRB1oSTl4DVEtRbw==
+X-UA-Compatible: IE=edge
+X-Content-Type-Options: nosniff
+Accept-Ranges: bytes
+Age: 0
+Access-Control-Allow-Origin: https://www.ma-reduc.com
+Vary: Origin
+Strict-Transport-Security: max-age=0
