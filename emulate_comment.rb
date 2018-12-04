@@ -2,7 +2,7 @@
 # @Author: dieuson
 # @Date:   2018-02-26 18:34:41
 # @Last Modified by:   Dieuson Virgile
-# @Last Modified time: 2018-02-27 00:20:48
+# @Last Modified time: 2018-03-11 15:06:19
 
 require './request.rb'
 include Request
@@ -13,9 +13,26 @@ def post_comment(body)
 	puts response
 end
 
-def negativ_comment(id)
-	comment = ""
-	login = "Jemmawas"
+def get_pseudo(nb_pseudos)
+	all_pseudos = []
+	url = "https://randomuser.me/api/?results=#{nb_pseudos}&nat=us,gb"
+	response = Request.get(url)
+	response.first[1].each do |person|
+		name_infos = person["name"]
+		pseudo = "#{name_infos['first'].capitalize}#{name_infos["last"].capitalize}"
+		pseudo.gsub!(" ", "")
+		puts pseudo
+		all_pseudos.push(pseudo)
+	end
+	return all_pseudos
+end
+
+def negativ_comment(id, login=nil)
+	reason = ["unavailable", "code invalid", "0 reduction", "ne fonctionne pas", "not working", "expired"]
+	comment = reason[rand(0...reason.count)]
+	if (login.nil?)
+		login = "Jemmawas"
+	end
 	body = {"comment": comment,
 		"work": "0",
 		"login": login,
@@ -25,7 +42,14 @@ def negativ_comment(id)
 		"ugc_type": "CouponProductReview",
 		"id_ugc_review": "",
 		"method": "CouponReview/add"}
+	post_comment(body)
+end
 
+def multi_negative_comment(id, nb_comments)
+	pseudos = get_pseudo(nb_comments)
+	pseudos.each do |login|
+		negativ_comment(id, login)
+	end
 end
 
 def commented_comment(id)
@@ -52,39 +76,47 @@ def simple_comment(id)
 	post_comment(body)
 end
 
-def main()
+def multi_positiv_comment(nb_comments)
 	url = "https://www.ma-reduc.com/majax.php"
 	@deal_id = 4529602
-	@coupon_code_id = 4520330
-
-	while true
+	@coupon_code_id = 4547648
+	i = 0
+	while i < nb_comments
 		Thread.new {
 			simple_comment(@coupon_code_id)
 		}
-		sleep_time = rand(300..600)
-		puts "sleep #{sleep_time}, next time: #{(Time.now + sleep_time).strftime("%H:%M:%S")}"
-		sleep(sleep_time)
+		sleep 1
+		i += 1
 
 	end
-
-
-	# body = {"comment": "",
-	# 		"id_coupon": "4520330",
-	# 		"login": "-",
-	# 		"method": "CouponReview/add",
-	# 		"type_coupon": "web",
-	# 		"ugc_type": "CouponReview",
-	# 		"work": "1"}
-	# for i in 0..10
-	# 	Thread.new {
-	# 		response = Request.post(url, body)
-	# 		puts response
-	# 	}
-	# 	# sleep_time = rand(300..600)
-	# 	sleep_time = 1
-	# 	puts "sleep #{sleep_time}"
-	# 	sleep(sleep_time)
-	# end
 end
 
+def main()
+	url = "https://www.ma-reduc.com/majax.php"
+	@deal_id = 4529602
+	@coupon_code_id = 4542550
+	coupon_codes = [4542550, 4547648]
+	i = 0
+
+	while true
+		@coupon_code_id = coupon_codes[i % 2]
+		sleep_time = rand(3600..14400)
+		next_time = Time.now + sleep_time
+		puts "sleep #{sleep_time}, next time: #{(Time.now + sleep_time).strftime("%H:%M:%S")}"
+
+		if (next_time.hour >= 8 && next_time.hour <= 22)
+			Thread.new {
+				simple_comment(@coupon_code_id)
+			}
+		else
+			puts "Night Night #{(Time.now + sleep_time).strftime("%H:%M:%S")}"
+		end
+		sleep(sleep_time)
+		i += 1
+	end
+end
+
+# multi_negative_comment(4547500, 58)
+# get_pseudo
 main()
+# multi_positiv_comment(20)
