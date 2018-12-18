@@ -94,12 +94,12 @@ end
 def main()
 	url = "https://www.ma-reduc.com/majax.php"
 	@deal_id = 4529602
-	@coupon_code_id = 4542550
+	@coupon_code_id = 4991518
 	coupon_codes = [4542550, 4547648]
 	i = 0
 
 	while true
-		@coupon_code_id = coupon_codes[i % 2]
+		# @coupon_code_id = coupon_codes[i % 2]
 		sleep_time = rand(3600..14400)
 		next_time = Time.now + sleep_time
 		puts "sleep #{sleep_time}, next time: #{(Time.now + sleep_time).strftime("%H:%M:%S")}"
